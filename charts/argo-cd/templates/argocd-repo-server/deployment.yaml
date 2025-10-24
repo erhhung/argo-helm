@@ -184,6 +184,12 @@ spec:
                 name: argocd-cmd-params-cm
                 key: redis.db
                 optional: true
+          - name: REDIS_CLUSTER_MODE
+            valueFrom:
+              configMapKeyRef:
+                name: argocd-cmd-params-cm
+                key: redis.cluster.mode
+                optional: true
           - name: REDIS_USERNAME
             valueFrom:
               secretKeyRef:
